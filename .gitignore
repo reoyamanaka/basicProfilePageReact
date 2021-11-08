@@ -25,3 +25,5 @@ yarn-error.log*
 gitignore
 **/.DS_Store
 
+credentials
+key.js

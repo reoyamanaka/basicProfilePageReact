@@ -1,5 +1,6 @@
 import './App.css';
 import Navbar from "./Navbar";
+import WeatherBox from "./WeatherBox";
 
 
 function App () {
