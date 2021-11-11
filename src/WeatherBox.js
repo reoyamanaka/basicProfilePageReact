@@ -24,20 +24,24 @@ var options = {
 };
 /* Open weather map settings end */
 
-var weather = null;
+// var weather = null;
 
-axios.request(options).then(function (response) {
-    console.log(response.data);
-    weather = response.data;
-}).catch(function (error) {
-    console.error(error);
-});
+function getWeather () {
+    var weather = null;
+    axios.request(options).then(function (response) {
+        console.log(response.data);
+        weather = response.data;
+    }).catch(function (error) {
+        console.error(error);
+    });
+    return weather;
+}
+
 
 function WeatherBox () {
-
     return (
         <div className="WeatherBox">
-
+            <p>{ getWeather() }</p>
         </div>
     );
 }
